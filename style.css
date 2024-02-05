@@ -23,20 +23,22 @@ body{
     left: 50%;
     transform: translate(-50%, -50%);
     border: 5px solid black;
+    z-index: 2;
 }
 .oreja-izquierda{
     position: relative;
-    width: 90px;
+    width: 80px;
     height: 80px;
     background: #0a7e96;
     border-top-right-radius: 20%;
     transform: rotate(-80deg) skewX(-30deg) scale(1, .866);
     border: 5px solid black;
+    left: 5px;
 }
 .oreja-izquierda::before,
 .oreja-izquierda::after{
     content: '';
-    position: absolute;
+    position: relative;
     width: inherit;
     height: inherit;
     background: inherit;
@@ -44,19 +46,19 @@ body{
 }
 .oreja-derecha{
     position: relative;
-    width: 90px;
+    width: 80px;
     height: 80px;
     background: #0a7e96;
     border-top-right-radius: 20%;
-    transform: rotate(-50deg) skewX(-30deg) scale(1, .866);
+    transform: rotate(-40deg) skewX(-30deg) scale(1, .866);
     border: 5px solid black;
-    left: 168px;
     bottom: 90px;
+    left: 185px;
 }
 .oreja-derecha::before,
 .oreja-derecha::after{
     content: '';
-    position: absolute;
+    position: relative;
     width: inherit;
     height: inherit;
     background: inherit;
