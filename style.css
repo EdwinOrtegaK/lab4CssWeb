@@ -4,10 +4,10 @@ body{
     margin: 0;
 }
 .snorlax{
-    background-color: #1c98b1;
+    background-color: #23b3d0;
     position: relative;
-    width: 280px;
-    height: 200px;
+    width: 380px;
+    height: 300px;
     border-radius: 50%;
     margin: auto;
     top: 200px;
@@ -18,35 +18,63 @@ body{
 }
 .oreja-izquierda{
     position: relative;
-    width: 80px;
-    height: 80px;
-    background: #1c98b1;
+    width: 120px;
+    height: 120px;
+    background: #23b3d0;
     margin: auto;
     border-top-right-radius: 20%;
     transform: rotate(-80deg) skewX(-30deg) scale(1, .866);
     border: 5px solid black;
-    left: -90px;
+    left: -115px;
     z-index: -1;
 }
 .oreja-derecha{
     position: relative;
-    width: 80px;
-    height: 80px;
-    background: #1c98b1;
+    width: 120px;
+    height: 120px;
+    background: #23b3d0;
     margin: auto;
     border-top-right-radius: 20%;
     transform: rotate(-40deg) skewX(-30deg) scale(1, .866);
     border: 5px solid black;
-    left: 90px;
-    top: -90px;
+    left: 115px;
+    top: -130px;
     z-index: -1;
+}
+.cara_1{
+    background-color: #197385;
+    position: relative;
+    width: 380px;
+    height: 270px;
+    border-radius: 50%;
+    top: -235px;
+    bottom: 0;
+    left: 0px;
+    right: 0;
+    z-index: 1;
 }
 .boca{
     background-color: #f1c181;
-    width: 250px;
-    height: 160px;
+    position: relative;
+    width: 340px;
+    height: 215px;
     border-radius: 50%;
     margin: auto;
-    transform: translate(0%, -85%);
+    transform: translate(0%, -200%);
     border: 5px solid black;
+    z-index: 2;
+}
+.frente{
+    position: relative;
+    width: 55px;
+    height: 55px;
+    background: #197385;
+    border-top-right-radius: 10%;
+    transform: rotate(-240deg) skewX(-30deg) scale(1, .866);
+    border: 5px solid black;
+    left: 155px;
+    top: -704px;
+    border-left: solid transparent;
+    border-bottom: solid transparent;
+    z-index: 2;
 }
