@@ -173,3 +173,28 @@ body{
 .snorlax > div:last-child {
     background-color: #07758c;
 }
+
+/*transicion y animacion*/
+@keyframes ladear {
+    0%, 100% {
+      transform: rotate(-5deg);
+    }
+    50% {
+      transform: rotate(5deg);
+    }
+}  
+@keyframes subeYBaja {
+    0%, 100% {
+      transform: translateY(0);
+    }
+    50% {
+      transform: translateY(-20px);
+    }
+}
+.snorlax-container {
+    animation: subeYBaja 3s ease-in-out infinite;
+    transition: transform 8s ease-in-out;
+}
+.snorlax-container:hover {
+    animation: ladear 4s ease-in-out infinite;
+}
