@@ -1,10 +1,13 @@
 body{
     background-color: #d1b7d6;
-    padding: 0;
-    margin: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: fixed;
+    left: 500px;
 }
 .snorlax{
-    background-color: #23b3d0;
+    background-color: #0cb6dc;
     position: relative;
     width: 380px;
     height: 300px;
@@ -16,33 +19,8 @@ body{
     right: 0;
     border: 5px solid black;
 }
-.oreja-izquierda{
-    position: relative;
-    width: 120px;
-    height: 120px;
-    background: #23b3d0;
-    margin: auto;
-    border-top-right-radius: 20%;
-    transform: rotate(-80deg) skewX(-30deg) scale(1, .866);
-    border: 5px solid black;
-    left: -115px;
-    z-index: -1;
-}
-.oreja-derecha{
-    position: relative;
-    width: 120px;
-    height: 120px;
-    background: #23b3d0;
-    margin: auto;
-    border-top-right-radius: 20%;
-    transform: rotate(-40deg) skewX(-30deg) scale(1, .866);
-    border: 5px solid black;
-    left: 115px;
-    top: -130px;
-    z-index: -1;
-}
-.cara_1{
-    background-color: #197385;
+.snorlax_c1{
+    background-color: #07758c;
     position: relative;
     width: 380px;
     height: 270px;
@@ -51,10 +29,51 @@ body{
     bottom: 0;
     left: 0px;
     right: 0;
-    z-index: 1;
 }
-.boca{
-    background-color: #f1c181;
+.orejas .oreja-izquierda,
+.orejas .oreja-derecha {
+    border: 5px solid black;
+    background: #0cb6dc;
+    width: 120px;
+    height: 120px;
+    border-top-right-radius: 20%;
+    z-index: -4;
+}
+.oreja-izquierda{
+    position: relative;
+    margin: auto;
+    transform: rotate(-80deg) skewX(-30deg) scale(1, .866);
+    left: -115px;
+}
+.oreja-derecha{
+    position: relative;
+    margin: auto;
+    transform: rotate(-40deg) skewX(-30deg) scale(1, .866);
+    left: 115px;
+    top: -130px;
+}
+.oreja-izquierda_c1{
+    background-color: #07758c;
+    position: relative;
+    height: 115px;
+    width: 115px;
+    clip-path: polygon(0 100%, 17% 5%, 100% 180%);
+    bottom: 1115px;
+    left: 18px;
+    z-index: -1;
+}
+.oreja-derecha_c1{
+    background-color: #07758c;
+    position: relative;
+    height: 115px;
+    width: 115px;
+    clip-path: polygon(0% 145%,100% 100%, 83% 0);
+    bottom: 1225px;
+    left: 248px;
+    z-index: -1;
+}
+.cara{
+    background-color: #f9c979;
     position: relative;
     width: 340px;
     height: 215px;
@@ -64,11 +83,77 @@ body{
     border: 5px solid black;
     z-index: 2;
 }
+.cara_c1{
+    background-color: #f9c989;
+    position: relative;
+    width: 320px;
+    height: 158px;
+    border-radius: 50%;
+    margin: auto;
+    transform: translate(0%, -502%);
+    z-index: 3;
+}
+.cara_c2{
+    background-color: #f9c999;
+    position: relative;
+    width: 180px;
+    height: 50px;
+    border-radius: 50%;
+    margin: auto;
+    bottom: 956px;
+    right: 2px;
+    z-index: 4;
+}
+.ojos{
+    position: relative;
+    height: auto;
+    width: auto;
+    bottom: 660px;
+    left: 95px;
+    z-index: 5;
+}
+.ojos::before,
+.ojos::after{
+    content: "";
+    display: inline-block;
+    height: 10px;
+    width: 48px;
+    border: 10px solid black;
+    border-radius: 80px 80px 0 0;
+    border-bottom: solid transparent;
+}
+.ojos::before{
+    margin-right: 25px;
+    rotate: 15deg;
+}
+.ojos::after{
+    margin-left: 25px;
+    rotate: -15deg;
+}
+.nariz{
+    height: 20px;
+    width: 70px;
+    border-radius: 50%;
+    position: relative;
+    bottom: 650px;
+    left: 155px;
+}
+.boca{
+    position: relative;
+    height: 10px;
+    width: 80px;
+    border: 8px solid black;
+    border-radius: 0 0 15px 15px;
+    border-top: none;
+    bottom: 620px;
+    left: 140px;
+    z-index: 5;
+}
 .frente{
     position: relative;
     width: 55px;
     height: 55px;
-    background: #197385;
+    background: #07758c;
     border-top-right-radius: 10%;
     transform: rotate(-240deg) skewX(-30deg) scale(1, .866);
     border: 5px solid black;
@@ -76,5 +161,15 @@ body{
     top: -704px;
     border-left: solid transparent;
     border-bottom: solid transparent;
-    z-index: 2;
+    z-index: 5;
+}
+.snorlax > div:nth-child(7) {
+    background-color: #f9c999;
+    z-index: 5;
+}
+.snorlax > div:first-child {
+    z-index: 1;
+}
+.snorlax > div:last-child {
+    background-color: #07758c;
 }
